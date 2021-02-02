@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import Button from './components/Button'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Tabs defaultIndex={3}>
+      <TabList>
+        <Tab>Colors</Tab>
+        <Tab>Typography</Tab>
+        <Tab>Spaces</Tab>
+        <Tab>Buttons</Tab>
+        <Tab>Inputs</Tab>
+        <Tab>Grid</Tab>
+      </TabList>
+      <TabPanel>ColorsContent</TabPanel>
+      <TabPanel>TypographyContent</TabPanel>
+      <TabPanel>SpacesContent</TabPanel>
+      <TabPanel><Button></Button></TabPanel>
+      <TabPanel>InputsContent</TabPanel>
+      <TabPanel>GridContent</TabPanel>
+    </Tabs >
   );
 }
 
